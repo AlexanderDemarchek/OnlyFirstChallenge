@@ -1,17 +1,17 @@
-let button = document.querySelector(".mb");
-let firstBlock = document.querySelector(".leftColumn");
-let secondBlock = document.querySelector(".rightColumn");
+let button = document.querySelector(".main__mb");
+let firstBlock = document.querySelector(".twoColumnBlock__leftColumn");
+let secondBlock = document.querySelector(".twoColumnBlock__rightColumn");
 let returnState = 0;
 let handler = function()
 {
 	if(returnState < 1){
-		firstBlock.className = "leftColumnChanged";
-		secondBlock.className = "rightColumnChanged";
+		firstBlock.classList.add("leftColumnChanged");
+		secondBlock.classList.add("rightColumnChanged");
 		returnState = 2;
 	}
 	else{
-		firstBlock.className = "leftColumn";
-		secondBlock.className = "rightColumn";
+		firstBlock.classList.remove("leftColumnChanged");
+		secondBlock.classList.remove("rightColumnChanged");
 		returnState = 0;
 	}
 }
